@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our completed projects and transformations">
+    <title>Gallery - Fixify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>Fixify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="auth-links">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <section class="page-hero">
+            <h1>Project Gallery</h1>
+            <p>Inspiring transformations and successful projects</p>
+        </section>
+
+        <section class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+            <button class="filter-btn" data-filter="bathroom">Bathroom</button>
+            <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+            <button class="filter-btn" data-filter="renovation">Renovation</button>
+        </section>
+
+        <section class="gallery-grid">
+            <!-- Gallery items will be loaded dynamically -->
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html> 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your Fixify account">
+    <title>Sign Up - Fixify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="logo-link">
+        <a href="index.html">
+            <i class="fas fa-tools"></i>
+            <h1>Fixify</h1>
+        </a>
+    </div>
+
+    <main class="auth-page">
+        <div class="auth-container">
+            <h1>Create Account</h1>
+            <p>Join Fixify today</p>
+            
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="terms">
+                        <input type="checkbox" id="terms" required>
+                        I agree to the <a href="#">Terms & Conditions</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-button">Sign Up</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/signup.js"></script>
+</body>
+</html> 

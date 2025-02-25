@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Fixify account">
+    <title>Login - Fixify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="logo-link">
+        <a href="index.html">
+            <i class="fas fa-tools"></i>
+            <h1>Fixify</h1>
+        </a>
+    </div>
+
+    <main class="auth-page">
+        <div class="auth-container">
+            <h1>Welcome Back</h1>
+            <p>Login to access your account</p>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html> 

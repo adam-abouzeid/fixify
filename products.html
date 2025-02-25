@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our wide selection of home improvement products at Fixify">
+    <title>Products - Fixify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Same header as index.html -->
+    <header>
+        <!-- ... navigation code ... -->
+    </header>
+
+    <main class="products-page">
+        <section class="page-hero">
+            <h1>Our Products</h1>
+            <p>Quality tools and materials for every project</p>
+        </section>
+
+        <section class="product-filters">
+            <div class="filter-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="all">All Categories</option>
+                    <option value="tools">Tools</option>
+                    <option value="hardware">Hardware</option>
+                    <option value="paint">Paint</option>
+                    <option value="electrical">Electrical</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Price Range:</label>
+                <input type="range" id="price" min="0" max="1000" step="50">
+                <span id="price-value">$500</span>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <!-- Product cards will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+    <footer>
+        <!-- ... footer code ... -->
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html> 

@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isValid) {
             // Submit form
             console.log('Form submitted');
-            // Add your login logic here
+            // Add your login logic here(phase2)
         }
     });
 });

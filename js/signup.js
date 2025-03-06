@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isValid) {
             // Submit form
             console.log('Form submitted');
-            // Add your signup logic here
+            // Add your signup logic here(phase2)
         }
     });
 });

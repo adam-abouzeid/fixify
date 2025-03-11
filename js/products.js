@@ -1,4 +1,3 @@
-// Product data
 const products = [
     {
         id: 1,
@@ -34,18 +33,15 @@ const products = [
     }
 ];
 
-// DOM Elements
 const productGrid = document.querySelector('.product-grid');
 const categoryFilter = document.getElementById('category');
 const priceRange = document.getElementById('price');
 const priceValue = document.getElementById('price-value');
 
-// Update price value display
 priceRange.addEventListener('input', (e) => {
     priceValue.textContent = `$${e.target.value}`;
 });
 
-// Filter products
 function filterProducts() {
     const selectedCategory = categoryFilter.value;
     const maxPrice = parseFloat(priceRange.value);
@@ -59,7 +55,6 @@ function filterProducts() {
     displayProducts(filteredProducts);
 }
 
-// Display products
 function displayProducts(productsToShow) {
     productGrid.innerHTML = productsToShow.map(product => `
         <article class="product-card" data-category="${product.category}">
@@ -72,9 +67,7 @@ function displayProducts(productsToShow) {
     `).join('');
 }
 
-// Add event listeners
 categoryFilter.addEventListener('change', filterProducts);
 priceRange.addEventListener('change', filterProducts);
 
-// Initialize display
 displayProducts(products); 

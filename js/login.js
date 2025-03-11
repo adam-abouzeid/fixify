@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const togglePassword = document.querySelector('.toggle-password');
     const passwordInput = document.getElementById('password');
 
-    // Toggle password visibility
     togglePassword.addEventListener('click', () => {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         togglePassword.classList.toggle('fa-eye-slash');
     });
 
-    // Form validation
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password');
         let isValid = true;
 
-        // Email validation
         if (!validateEmail(email.value)) {
             showError(email, 'Please enter a valid email address');
             isValid = false;
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clearError(email);
         }
 
-        // Password validation
         if (password.value.length < 6) {
             showError(password, 'Password must be at least 6 characters');
             isValid = false;
@@ -36,9 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (isValid) {
-            // Submit form
             console.log('Form submitted');
-            // Add your login logic here(phase2)
         }
     });
 });
@@ -60,4 +54,4 @@ function clearError(input) {
     formGroup.classList.remove('error');
     const error = formGroup.querySelector('.error-message');
     error.textContent = '';
-} 
+}

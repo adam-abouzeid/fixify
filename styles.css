@@ -1,18 +1,19 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Navigation Styles */
-nav {
+.fixed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
     background-color: #ffffff;
     padding: 1rem 5%;
     display: flex;
@@ -22,6 +23,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
 }
 
@@ -29,6 +31,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 150px;
 }
 
 .logo i {
@@ -39,12 +42,17 @@ nav {
 .logo h1 {
     font-size: 1.8rem;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex: 1;
 }
 
 .nav-links a {
@@ -52,28 +60,33 @@ nav {
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-family: Arial, sans-serif;
 }
 
-.nav-links a:hover {
-    color: #ff6b6b;
-}
-
+.nav-links a:hover,
 .nav-links a.active {
     color: #ff6b6b;
 }
 
-/* Auth Links in Navigation */
 .auth-links {
-    margin-left: 2rem;
     display: flex;
     gap: 1rem;
-    align-items: center;
+    min-width: 150px;
+    justify-content: flex-end;
 }
 
 .auth-links a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+}
+
+.login-btn {
+    color: #ff6b6b;
 }
 
 .signup-btn {
@@ -106,35 +119,41 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s ease 0.3s;
-    opacity: 0;
-    animation-fill-mode: forwards;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-family: Arial, sans-serif;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     background-color: #ff6b6b;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     animation: fadeInUp 1s ease 0.6s;
     opacity: 0;
     animation-fill-mode: forwards;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+    font-family: Arial, sans-serif;
 }
 
 .cta-button:hover {
     background-color: #ff5252;
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,107,107,0.4);
 }
 
 /* Categories Section */
@@ -155,17 +174,18 @@ nav {
 }
 
 .category-card {
-    background-color: white;
+    background: white;
+    border-radius: 12px;
     padding: 2rem;
-    border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
     cursor: pointer;
 }
 
 .category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .category-card i {
@@ -191,9 +211,9 @@ nav {
 }
 
 .deal-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
     text-align: center;
     position: relative;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -278,7 +298,6 @@ nav {
     margin-right: 0.5rem;
 }
 
-/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -343,8 +362,28 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1rem 2%;
+    }
+
+    .logo {
+        min-width: auto;
+        margin-right: 1rem;
+    }
+
     .nav-links {
-        display: none;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .auth-links {
+        min-width: auto;
     }
     
     .hero-content h1 {
@@ -357,12 +396,6 @@ footer {
     
     .deals-container {
         grid-template-columns: 1fr;
-    }
-
-    .auth-links {
-        margin-left: 0;
-        margin-top: 1rem;
-        justify-content: center;
     }
 }
 
@@ -381,6 +414,11 @@ footer {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.page-hero p {
+    font-family: Arial, sans-serif;
 }
 
 .product-filters {
@@ -401,6 +439,7 @@ footer {
 
 .filter-group label {
     font-weight: 500;
+    font-family: Arial, sans-serif;
 }
 
 .filter-group select,
@@ -441,6 +480,7 @@ footer {
 .product-card h3 {
     margin-bottom: 0.5rem;
     color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .product-card .price {
@@ -476,12 +516,13 @@ footer {
 }
 
 .service-card {
-    background-color: white;
+    background: white;
+    border-radius: 12px;
     padding: 2rem;
-    border-radius: 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .service-card:hover {
@@ -541,7 +582,6 @@ footer {
     border-radius: 5px;
 }
 
-/* Gallery Page Styles */
 .gallery-filters {
     padding: 2rem 5%;
     text-align: center;
@@ -618,7 +658,6 @@ footer {
     cursor: pointer;
 }
 
-/* Blog Page Styles */
 .blog-content {
     padding: 4rem 5%;
     display: grid;
@@ -667,12 +706,14 @@ footer {
 .blog-card h2 {
     padding: 0 1.5rem;
     margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
 }
 
 .blog-card p {
     padding: 0 1.5rem;
     color: #666;
     margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
 }
 
 .read-more {
@@ -683,7 +724,6 @@ footer {
     font-weight: 500;
 }
 
-/* Blog Sidebar */
 .blog-sidebar {
     position: sticky;
     top: 100px;
@@ -710,7 +750,6 @@ footer {
     cursor: pointer;
 }
 
-/* About Page Styles */
 .about-hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
@@ -773,7 +812,6 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .blog-content {
         grid-template-columns: 1fr;
@@ -784,7 +822,6 @@ footer {
     }
 }
 
-/* Authentication Pages Styles */
 .auth-page {
     min-height: calc(100vh - 80px);
     padding: 80px 1rem;
@@ -807,6 +844,7 @@ footer {
 .auth-container h1 {
     color: #333;
     margin-bottom: 0.5rem;
+    font-family: Arial, sans-serif;
 }
 
 .auth-container > p {
@@ -827,6 +865,7 @@ footer {
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: 500;
+    font-family: Arial, sans-serif;
 }
 
 .auth-form input {
@@ -884,6 +923,7 @@ footer {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
 }
 
 .auth-button:hover {
@@ -936,4 +976,170 @@ footer {
 
 .logo-link h1 {
     font-size: 1.8rem;
-} 
+}
+
+.main-header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007bff;
+}
+
+.auth-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.login-btn {
+    color: #007bff;
+}
+
+.signup-btn {
+    background: #007bff;
+    color: white;
+}
+
+.view-all-container {
+    padding: 3rem 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.view-all-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.view-all-wrapper h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.view-all-wrapper p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.view-all-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.view-all-button:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+.view-all-button i {
+    transition: transform 0.3s;
+}
+
+.view-all-button:hover i {
+    transform: translateX(4px);
+}
+
+.category-card, .deal-card, .service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.category-card:hover, .deal-card:hover, .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Form elements modernization */
+input, select, button {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+input:focus, select:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255,107,107,0.1);
+    outline: none;
+}
+
+button:not(.auth-button) {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+button:not(.auth-button):hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}

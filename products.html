@@ -9,9 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Same header as index.html -->
     <header>
-        <!-- ... navigation code ... -->
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>Fixify</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
     </header>
 
     <main class="products-page">
@@ -39,15 +57,12 @@
         </section>
 
         <section class="product-grid">
-            <!-- Product cards will be dynamically loaded here -->
         </section>
     </main>
 
-    <!-- Same footer as index.html -->
     <footer>
-        <!-- ... footer code ... -->
     </footer>
 
     <script src="js/products.js"></script>
 </body>
-</html> 
+</html>

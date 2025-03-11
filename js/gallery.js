@@ -1,4 +1,3 @@
-// Gallery data
 const galleryItems = [
     {
         id: 1,
@@ -26,14 +25,12 @@ const galleryItems = [
     }
 ];
 
-// DOM Elements
 const galleryGrid = document.querySelector('.gallery-grid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeLightbox = document.querySelector('.close-lightbox');
 
-// Display gallery items
 function displayGalleryItems(items) {
     galleryGrid.innerHTML = items.map(item => `
         <div class="gallery-item" data-category="${item.category}">
@@ -41,17 +38,11 @@ function displayGalleryItems(items) {
         </div>
     `).join('');
 }
-
-// Filter gallery items
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const filter = button.dataset.filter;
-        
-        // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        
-        // Filter items
         const filteredItems = filter === 'all' 
             ? galleryItems 
             : galleryItems.filter(item => item.category === filter);
@@ -60,7 +51,6 @@ filterButtons.forEach(button => {
     });
 });
 
-// Lightbox functionality
 function openLightbox(imageSrc, caption) {
     lightboxImg.src = imageSrc;
     lightbox.style.display = 'block';
@@ -72,5 +62,4 @@ closeLightbox.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 });
 
-// Initialize gallery
 displayGalleryItems(galleryItems); 

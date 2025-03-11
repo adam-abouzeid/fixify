@@ -1,3 +1,4 @@
+/*ALL*/
 * {
   margin: 0;
   padding: 0;
@@ -328,7 +329,16 @@ header {
   font-size: 1rem;
   margin: 0;
 }
+.categories-widget{
+  color: #ff6b6b;
+}
 
+a{
+  color: #333;
+}
+a:hover{
+  color:#ff6b6b ;
+}
 /* Deals Section */
 .deals {
   padding: 5rem 5%;
@@ -579,7 +589,27 @@ header {
   height: 100%;
   border: none;
 }
+.contact-hero {
+  
+    background: 
+      url("https://www.shutterstock.com/image-illustration/website-internet-contact-us-icons-600nw-1278116476.jpg");
+    background-size: cover;
+    background-position: center; /* This centers the image */
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 0; /* Adjust this to add space above and below the text */
+    height: 500px; /* Fixed height of the section */
 
+}
+.contact-hero h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+}
 .view-all-container {
   text-align: center;
   margin-top: 3rem;
@@ -939,6 +969,93 @@ footer {
   padding: 4rem 5%;
   background-color: #f9f9f9;
 }
+.contact-page {
+  padding-top: 80px;
+}
+
+.contact-grid {
+  padding: 4rem 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ff5252;
+}
+
+.contact-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+  width: 100%;
+  max-width: 500px; 
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
 
 .booking-form {
   max-width: 600px;
@@ -1203,6 +1320,21 @@ footer {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+.blog-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://mymodernmet.com/wp/wp-content/uploads/2018/10/best-craft-blogs-thumbnail.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.blog-hero h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+}
 
 @media (max-width: 768px) {
   .blog-content {
@@ -1234,6 +1366,7 @@ footer {
   width: 100%;
   max-width: 450px;
   text-align: center;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }

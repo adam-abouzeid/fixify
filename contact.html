@@ -1,4 +1,4 @@
-<!--Abdullah-->
+<!--Ali-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,11 +25,11 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="services.html" >Services</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html"class="active">Contact</a></li>
         </ul>
         <div class="auth-links">
           <a href="login.html" class="login-btn">Login</a>
@@ -38,61 +38,71 @@
       </div>
     </header>
 
-    <main class="services-page">
-      <section class="page-hero services-hero">
-        <h1>Our Services</h1>
-        <p>Expert solutions for your home improvement projects</p>
+    <main class="contact-page">
+      <section class="page-hero contact-hero">
+        <h1>How to contact us</h1>
       </section>
 
-      <section class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-hammer"></i>
-          <h3>Installation Services</h3>
-          <p>Professional installation of fixtures, appliances, and more</p>
-          <a href="#" class="service-button">Learn More</a>
+      <section class="contact-grid">
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <h3>Phone number</h3>
+          <p>961 81818181</p>
+          <a href="#" class="contact-button">Call Us</a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-paint-roller"></i>
-          <h3>Paint Consultation</h3>
-          <p>Expert color matching and painting services</p>
-          <a href="#" class="service-button">Learn More</a>
+        <div class="contact-card">
+          <i class="fas fa-message"></i>
+          <h3>Email</h3>
+          <p>Info@fixify.com</p>
+          <a href="#" class="contact-button">E-mail</a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-ruler-combined"></i>
-          <h3>Custom Measurements</h3>
-          <p>Precise measurements for your home projects</p>
-          <a href="#" class="service-button">Learn More</a>
+        <div class="contact-card">
+            <i class="fas fa-location"></i>
+            <h3>Location</h3>
+            <p> <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.7673595634307!2d35.4778!3d33.8881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17283d8b3c31%3A0x44f7e0e7f3fee36d!2sLebanese%20American%20University!5e0!3m2!1sen!2slb!4v1647887654321!5m2!1sen!2slb"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe></p>
+            <a href="#" class="contact-button">Visit Us</a>
+          </div>
+        <div class="contact-card">
+            <i class="fab fa-facebook"></i>
+            <h3>Facebook</h3>
+            <p>fixify</p>
+            <a href="#" class="contact-button">Follow Us</a>
+          </div>
+        <div class="contact-card">
+          <i class="fab fa-instagram"></i>
+          <h3>Instagram</h3>
+          <p>fixify</p>
+          <a href="#" class="contact-button">Follow Us</a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-truck"></i>
-          <h3>Delivery Service</h3>
-          <p>Same-day delivery for local purchases</p>
-          <a href="#" class="service-button">Learn More</a>
+        <div class="contact-card">
+          <i class="fab fa-twitter"></i>
+          <h3>Twitter</h3>
+          <p>fixify</p>
+          <a href="#" class="contact-button">Follow Us</a>
         </div>
       </section>
 
-      <section class="service-booking">
-        <h2>Book a Service</h2>
-        <form id="booking-form" class="booking-form">
+      <section class="contact-booking">
+        <h2>Contact Form</h2>
+        <form id="contact-form" class="contact-form">
           <div class="form-group">
-            <label for="service-type">Service Type</label>
-            <select id="service-type" required>
-              <option value="">Select a service</option>
-              <option value="installation">Installation</option>
-              <option value="consultation">Paint Consultation</option>
-              <option value="measurement">Custom Measurements</option>
-              <option value="delivery">Delivery</option>
-            </select>
+            <label for="Phone-number">Phone number</label>
+            <input type="tel" id="Phone-number" required>
+          </input>
           </div>
           <div class="form-group">
-            <label for="service-date">Preferred Date</label>
-            <input type="date" id="service-date" required />
+            <label for="contact-date">Contact Date</label>
+            <input type="date" id="contact-date" required />
           </div>
           <div class="form-group">
-            <label for="service-time">Preferred Time</label>
-            <input type="time" id="service-time" required />
+            <label for="Email">Email</label>
+            <input type="Email" id="Email" required />
           </div>
-          <button type="submit" class="submit-button">Book Now</button>
+          <button type="submit" class="submit-button">Contact Now</button>
         </form>
       </section>
     </main>

@@ -1,3 +1,4 @@
+//adnan
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signup-form');
     const togglePasswords = document.querySelectorAll('.toggle-password');
